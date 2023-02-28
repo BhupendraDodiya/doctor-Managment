@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<form method="post" action="/lreg/">
+<form method="post" action="/login_reg/">
   {% csrf_token %}
   <div class="container">
-    <h1>Doctor Login</h1>
+    <h1>User Login</h1>
     {% for i in messages %}
       <h4 style="color:red;">* {{i}}</h4>
     {% endfor %}
@@ -29,7 +29,7 @@
   </div>
   
   <div class="container signin">
-    <p>Don't have an account? <a href="/">Signup </a>.</p>
+    <p>Don't have an account? <a href="/usersignup/"> User Signup </a>.</p>
   </div>
 </form>
 
