@@ -8,7 +8,11 @@ class Doctor(models.Model):
     Email = models.EmailField()
     Password = models.CharField(max_length=100)
     Image = models.ImageField(upload_to='docimage/')
-    Category = models.CharField(max_length=100)
+    Category = models.CharField(max_length=100,choices=(('lungsSpecialist',"lungsSpecialist"),
+                                                        ('eyespecialist','eyespecialist'),
+                                                        ('heartspecialist','heartspecialist'),
+                                                        ('legspecialist','legspecialist'),
+                                                        ))
 
 class User(models.Model):
     Name = models.CharField(max_length=100)
